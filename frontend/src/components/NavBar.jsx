@@ -45,6 +45,12 @@ const NavBar = () => {
             <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 group-hover:block hidden" />
           </NavLink>
           </li>
+           <li className="flex flex-col items-center gap-1 mt-1 text-xs">
+             <a href="https://forever-admin-gamma-hazel.vercel.app/add" target="_blank" rel="noopener noreferrer" className="border px-5 text-xs py-1 rounded-full -mt-2">
+                <p className='mt-1'>Admin Panel</p>
+          </a>
+          </li>
+
       </ul>
 
       {/* Profile and Cart */}
