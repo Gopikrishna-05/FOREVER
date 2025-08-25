@@ -41,7 +41,7 @@ const PlaceOrder = () => {
             handler: async (response)=>{
                console.log(response);
                try{
-                 const {data}= await axios.post(backendUrl +'/api/order/verifyrazorpay',response, {headers: { token } });
+                 const {data}= await axios.post(`${backendUrl}/api/order/verifyrazorpay`,response, {headers: { token } });
                     if(data.success){
                      navigate('/orders');
                      setCartItems({});
@@ -106,7 +106,7 @@ const PlaceOrder = () => {
           break;
 
           case 'razorpay':
-          const responseRazorpay = await axios.post(backendUrl + '/api/order/razorpay',
+          const responseRazorpay = await axios.post(`${backendUrl}/api/order/razorpay`,
             orderData, { headers: { token } });  
           if (responseRazorpay.data.success) {
              initPay(responseRazorpay.data.order);
